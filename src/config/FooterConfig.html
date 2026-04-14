@@ -1,1 +1,26 @@
-这里是HTML注入示例，你可以在这个文件中添加自定义的HTML内容
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    /* 彩色渐变文字 */
+    .greeting {
+      font-size: 24px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff5e8f, #7f7dff, #5ce0ff, #ffd600);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 20px;
+    }
+    .greeting::selection {
+      background: rgba(255, 255, 255, 0.3); /* 使用半透明背景，让底下的渐变色透出来 */
+      color: transparent; /* 保持文字透明 */
+      }
+  </style>
+</head>
+
+<body>
+  <div class="greeting">❄️风起残雪，🦗夜听蝉吟。世间寒凉，🔥唯心火不熄……</div>
+</body>
+</html>
